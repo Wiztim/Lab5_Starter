@@ -1,13 +1,6 @@
 // explore.js
 
-window.addEventListener('DOMContentLoaded', init);
-
-
-function init() {
-  let asdf = new SpeechSynthesisUtterance("hello world");
-  //speechSynthesis.speak(asdf)
-}
-
+// populate the list of voices
 const synth = window.speechSynthesis;
 const select = document.getElementById("voice-select");
 var voiceList;
@@ -21,6 +14,7 @@ synth.addEventListener('voiceschanged', () => {
   }
 });
 
+// convert input text into speech
 const textArea = document.getElementById("text-to-speak");
 const button = document.querySelector("button");
 const image = document.querySelector("img");
@@ -30,6 +24,7 @@ button.addEventListener('click', () => {
   speechSynthesis.speak(ttsText);
 });
 
+// set an interval to check if the tts is talking, and update the image accordingly
 setInterval(ttsSpeaking, 100);
 
 function ttsSpeaking() {
