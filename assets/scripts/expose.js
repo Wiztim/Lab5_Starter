@@ -1,4 +1,6 @@
 // expose.js
+
+// change the image based on the selected horn
 const selector = document.getElementById("horn-select");
 const image = document.querySelector("img");
 const sound = document.querySelector("audio");
@@ -22,6 +24,7 @@ selector.addEventListener('change', () => {
   }
 });
 
+// set value and picture based on sound level
 const volumeLevel = document.getElementById("volume-controls").querySelector("input");
 const volumeIcon = document.getElementById("volume-controls").querySelector("img")
 volumeLevel.addEventListener('input', () => {
@@ -42,6 +45,7 @@ volumeLevel.addEventListener('input', () => {
   sound.volume = level / 100;
 });
 
+// play the sound based on selected horn
 const button = document.querySelector("button");
 const jsConfetti = new JSConfetti(button);
 button.addEventListener('click', () => {
