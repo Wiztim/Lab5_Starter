@@ -1,9 +1,4 @@
 // expose.js
-window.addEventListener('DOMContentLoaded', init);
-
-function init() {
-  // TODO
-}
 const selector = document.getElementById("horn-select");
 const image = document.querySelector("img");
 const sound = document.querySelector("audio");
